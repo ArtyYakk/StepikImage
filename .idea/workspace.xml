@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="501c27a4-456a-457c-90be-06c8cf8aab3a" name="Changes" comment="Ракета движется, пока что кликами">
+    <list default="true" id="501c27a4-456a-457c-90be-06c8cf8aab3a" name="Changes" comment="Ракета движется">
+      <change afterPath="$PROJECT_DIR$/src/Move.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/figures/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/figures/Rocket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -72,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657464765445</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ракета движется">
+      <created>1657481411077</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657481411077</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -89,6 +99,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ракета есть, но пока не движется" />
     <MESSAGE value="Ракета движется, пока что кликами" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ракета движется, пока что кликами" />
+    <MESSAGE value="Ракета движется" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ракета движется" />
   </component>
 </project>

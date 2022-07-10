@@ -1,44 +1,52 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.event.MouseInputAdapter;
-import javax.xml.stream.Location;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class Main extends JFrame {
-    static int xx = 0;
-    static int yy = 0;
+    static int xx = -174;
+    static int yy = -174;
 
     public static void main(String[] args) throws IOException {
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("Ракета");
         frame.setLocation(1120,240);
         frame.setPreferredSize(new Dimension(800,800));
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         Rocket aa = new Rocket(xx,yy);
-        frame.addMouseListener(new MouseInputAdapter() {
+
+        ActionListener listener = new ActionListener(){
             @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
+            public void actionPerformed(ActionEvent e) {
+                DateFormat dateFormat =  new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                Date date = new Date();
+
                 if(xx <= 780){
-                    xx += 20;
-                    yy += 20;
+                    xx += 2;
+                    yy += 2;
                 }
                 else{
-                    xx = -173;
-                    yy = -173;
+                    xx = -174;
+                    yy = -174;
                 }
                 System.out.println(xx + " " + yy);
                 frame.add(new Rocket(xx,yy));
                 frame.setVisible(true);
                 frame.pack();
             }
-        });
+        };
+        Timer timer = new Timer(1, listener);
+        timer.start();
 
         frame.add(aa);
         frame.setVisible(true);

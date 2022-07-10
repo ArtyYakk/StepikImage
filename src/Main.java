@@ -1,7 +1,9 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.event.MouseInputAdapter;
 import javax.xml.stream.Location;
 import java.awt.*;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -9,6 +11,8 @@ import java.io.IOException;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class Main extends JFrame {
+    static int xx = 0;
+    static int yy = 0;
 
     public static void main(String[] args) throws IOException {
         JFrame frame = new JFrame();
@@ -16,7 +20,25 @@ public class Main extends JFrame {
         frame.setPreferredSize(new Dimension(800,800));
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        Rocket aa = new Rocket(100,100);
+        Rocket aa = new Rocket(xx,yy);
+        frame.addMouseListener(new MouseInputAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                if(xx <= 780){
+                    xx += 20;
+                    yy += 20;
+                }
+                else{
+                    xx = -173;
+                    yy = -173;
+                }
+                System.out.println(xx + " " + yy);
+                frame.add(new Rocket(xx,yy));
+                frame.setVisible(true);
+                frame.pack();
+            }
+        });
 
         frame.add(aa);
         frame.setVisible(true);

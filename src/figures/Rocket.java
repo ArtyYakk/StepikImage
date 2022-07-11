@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Rocket extends JPanel {
-    private BufferedImage img;
+    public BufferedImage img;
     private final int x;
     private final int y;
 

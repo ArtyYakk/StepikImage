@@ -1,5 +1,4 @@
-import figures.Car;
-import figures.Rocket;
+import figures.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,34 +10,35 @@ public class  Move extends JFrame {
     static int yRock = -174;
     static int xCar = 0;
     static int yCar = 10;
+    static int x0Dvd = 0;
+    static int y0Dvd = 0;
+    static int x1Dvd = 0;0;
     static double angleCar = 0;
     static boolean flagOne = true;
     static boolean flagTwo = true;
     static boolean flagThree = true;
 
-//РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА
-    public static void moveRocket(){
-        JFrame frame = new JFrame("Ракета");
-        frame.setLocation(1120,240);
-        frame.setPreferredSize(new Dimension(800,800));
+    //DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD
+    public static void moveDvd(){
+        JFrame frame = new JFrame("DVD");
+        frame.setLocation(980,440);
+        frame.setPreferredSize(new Dimension(900,600));
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        Rocket aa = new Rocket(xRock,yRock);
+        //По y ВВЕРХ ничего, ВНИЗ "y - getHeight"
+        //По х ВПРАВО "x - hetWidth", ВЛЕВО ничего
+
+        Dvd aa = new Dvd(x0Dvd, y0Dvd);
 
         ActionListener listener = new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                if(xRock <= 780){
-                    xRock += 2;
-                    yRock += 2;
-                }
-                else{
-                    xRock = -174;
-                    yRock = -174;
-                }
-                System.out.println(xRock + " " + yRock);
-                frame.add(new Rocket(xRock,yRock));
+                    x0Dvd += 3;
+                    y0Dvd += 2;
+
+                System.out.println(x0Dvd + " " + y0Dvd);
+                frame.add(new Dvd(x0Dvd, y0Dvd));
                 frame.setVisible(true);
                 frame.pack();
             }
@@ -51,7 +51,7 @@ public class  Move extends JFrame {
         frame.pack();
     }
 
-//МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА
+    //МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА
     public static void moveCar(){
         JFrame frame = new JFrame("Машина");
         frame.setLocation(1120,240);
@@ -99,7 +99,7 @@ public class  Move extends JFrame {
                 frame.pack();
             }
         };
-        Timer timer = new Timer(10, listener);
+        Timer timer = new Timer(1, listener);
         timer.start();
 
 
@@ -108,4 +108,40 @@ public class  Move extends JFrame {
         frame.setVisible(true);
         frame.pack();
     }
+
+//РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА РАКЕТА
+    public static void moveRocket(){
+        JFrame frame = new JFrame("Ракета");
+        frame.setLocation(1120,240);
+        frame.setPreferredSize(new Dimension(800,800));
+        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        Rocket aa = new Rocket(xRock,yRock);
+
+        ActionListener listener = new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                if(xRock <= 780){
+                    xRock += 2;
+                    yRock += 2;
+                }
+                else{
+                    xRock = -174;
+                    yRock = -174;
+                }
+                System.out.println(xRock + " " + yRock);
+                frame.add(new Rocket(xRock,yRock));
+                frame.setVisible(true);
+                frame.pack();
+            }
+        };
+        Timer timer = new Timer(1, listener);
+        timer.start();
+
+        frame.add(aa);
+        frame.setVisible(true);
+        frame.pack();
+    }
+
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="501c27a4-456a-457c-90be-06c8cf8aab3a" name="Changes" comment="Машина движется по квадратной траектории, поворачивает">
-      <change afterPath="$PROJECT_DIR$/src/figures/Dvd.java" afterDir="false" />
+    <list default="true" id="501c27a4-456a-457c-90be-06c8cf8aab3a" name="Changes" comment="Промежуточный коммит">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/figures/Dvd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/figures/Dvd.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Lay">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Lay" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lay" />
       <module name="StepikImage" />
@@ -54,8 +54,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Lay" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Lay" />
       </list>
     </recent_temporary>
   </component>
@@ -103,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657572819212</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Промежуточный коммит">
+      <created>1657743830112</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657743830112</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +130,7 @@
     <MESSAGE value="Ракета движется" />
     <MESSAGE value="Сделал отдельно класс для движения, классы для разных изображений в пакете" />
     <MESSAGE value="Машина движется по квадратной траектории, поворачивает" />
-    <option name="LAST_COMMIT_MESSAGE" value="Машина движется по квадратной траектории, поворачивает" />
+    <MESSAGE value="Промежуточный коммит" />
+    <option name="LAST_COMMIT_MESSAGE" value="Промежуточный коммит" />
   </component>
 </project>

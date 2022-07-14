@@ -10,9 +10,12 @@ public class  Move extends JFrame {
     static int yRock = -174;
     static int xCar = 0;
     static int yCar = 10;
-    static int x0Dvd = 0;
-    static int y0Dvd = 0;
-    static int x1Dvd = 0;0;
+    static int xDvd = 0;
+    static int yDvd = 200;
+    static boolean flagUR = false;
+    static boolean flagUL = false;
+    static boolean flagDR = true;
+    static boolean flagDL = false;
     static double angleCar = 0;
     static boolean flagOne = true;
     static boolean flagTwo = true;
@@ -28,24 +31,69 @@ public class  Move extends JFrame {
         //По y ВВЕРХ ничего, ВНИЗ "y - getHeight"
         //По х ВПРАВО "x - hetWidth", ВЛЕВО ничего
 
-        Dvd aa = new Dvd(x0Dvd, y0Dvd);
+        Dvd aa = new Dvd(xDvd, yDvd);
 
         ActionListener listener = new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                    x0Dvd += 3;
-                    y0Dvd += 2;
+                if(flagUR){
+                    xDvd += 2;
+                    yDvd -= 2;
+                    if(xDvd >= (885 - aa.img.getWidth())){
+                        flagUR = false;
+                        flagUL = true;
+                    }
+                    else if(yDvd <= 0){
+                        flagUR = false;
+                        flagDR = true;
+                    }
+                }
+                else if(flagUL){
+                    xDvd -= 2;
+                    yDvd -= 2;
+                    if(yDvd <= 0){
+                        flagUL = false;
+                        flagDL = true;
+                    }
+                    else if(xDvd <= 0){
+                        flagUL = false;
+                        flagUR = true;
+                    }
+                }
+                else if(flagDL){
+                    xDvd -= 2;
+                    yDvd += 2;
+                    if(yDvd >= (560 - aa.img.getHeight())){
+                        flagDL = false;
+                        flagUL = true;
+                    }
+                    else if(xDvd <= 0){
+                        flagDL = false;
+                        flagDR = true;
+                    }
+                }
+                else if (flagDR){
+                    xDvd += 2;
+                    yDvd += 2;
+                    if(yDvd >= (560 - aa.img.getHeight())){
+                        flagDR = false;
+                        flagUR = true;
+                    }
+                    else if(xDvd >= (885 - aa.img.getWidth())){
+                        flagDR = false;
+                        flagDL = true;
+                    }
+                }
 
-                System.out.println(x0Dvd + " " + y0Dvd);
-                frame.add(new Dvd(x0Dvd, y0Dvd));
+                System.out.println(xDvd + " " + yDvd);
+                frame.add(new Dvd(xDvd, yDvd));
                 frame.setVisible(true);
                 frame.pack();
             }
         };
         Timer timer = new Timer(1, listener);
         timer.start();
-
         frame.add(aa);
         frame.setVisible(true);
         frame.pack();

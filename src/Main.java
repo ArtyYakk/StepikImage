@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 
 public class Main extends JFrame {
@@ -7,6 +8,7 @@ public class Main extends JFrame {
         //Move.moveRocket();
         //Move.moveCar();
         Move.moveDvd();
+
 
     }
 

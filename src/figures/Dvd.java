@@ -17,6 +17,13 @@ public class Dvd extends JPanel {
         this.y = y;
         try{
             img = ImageIO.read(new File("C:\\Users\\iakon\\Pictures\\dvd.png"));
+            for(int i = 0; i<img.getWidth(); i++){
+                for (int j = 0; j<img.getHeight(); j++){
+                    if(img.getRGB(i,j) != 0){
+                        img.setRGB(i,j,new Color(255,0,0).getRGB());
+                    }
+                }
+            }
         } catch (IOException ex){
             System.out.println("Picture hasn't found");
         }
@@ -26,5 +33,7 @@ public class Dvd extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(img, x,y,this);
+
+
     }
 }

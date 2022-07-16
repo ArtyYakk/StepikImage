@@ -12,6 +12,10 @@ public class  Move extends JFrame {
     static int yCar = 10;
     static int xDvd = 0;
     static int yDvd = 200;
+    static int r= 0;
+    static int g = 0;
+    static int b = 0;
+
     static boolean flagUR = false;
     static boolean flagUL = false;
     static boolean flagDR = true;
@@ -27,11 +31,7 @@ public class  Move extends JFrame {
         frame.setLocation(980,440);
         frame.setPreferredSize(new Dimension(900,600));
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-        //По y ВВЕРХ ничего, ВНИЗ "y - getHeight"
-        //По х ВПРАВО "x - hetWidth", ВЛЕВО ничего
-
-        Dvd aa = new Dvd(xDvd, yDvd);
+        Dvd aa = new Dvd(xDvd, yDvd, r, g, b);
 
         ActionListener listener = new ActionListener(){
             @Override
@@ -40,11 +40,13 @@ public class  Move extends JFrame {
                 if(flagUR){
                     xDvd += 2;
                     yDvd -= 2;
-                    if(xDvd >= (885 - aa.img.getWidth())){
+                    if(xDvd >= (885 - aa.newImg.getWidth())){
+                        randomDvd();
                         flagUR = false;
                         flagUL = true;
                     }
                     else if(yDvd <= 0){
+                        randomDvd();
                         flagUR = false;
                         flagDR = true;
                     }
@@ -53,10 +55,12 @@ public class  Move extends JFrame {
                     xDvd -= 2;
                     yDvd -= 2;
                     if(yDvd <= 0){
+                        randomDvd();
                         flagUL = false;
                         flagDL = true;
                     }
                     else if(xDvd <= 0){
+                        randomDvd();
                         flagUL = false;
                         flagUR = true;
                     }
@@ -64,11 +68,13 @@ public class  Move extends JFrame {
                 else if(flagDL){
                     xDvd -= 2;
                     yDvd += 2;
-                    if(yDvd >= (560 - aa.img.getHeight())){
+                    if(yDvd >= (560 - aa.newImg.getHeight())){
+                        randomDvd();
                         flagDL = false;
                         flagUL = true;
                     }
                     else if(xDvd <= 0){
+                        randomDvd();
                         flagDL = false;
                         flagDR = true;
                     }
@@ -76,18 +82,20 @@ public class  Move extends JFrame {
                 else if (flagDR){
                     xDvd += 2;
                     yDvd += 2;
-                    if(yDvd >= (560 - aa.img.getHeight())){
+                    if(yDvd >= (560 - aa.newImg.getHeight())){
+                        randomDvd();
                         flagDR = false;
                         flagUR = true;
                     }
-                    else if(xDvd >= (885 - aa.img.getWidth())){
+                    else if(xDvd >= (885 - aa.newImg.getWidth())){
+                        randomDvd();
                         flagDR = false;
                         flagDL = true;
                     }
                 }
 
                 System.out.println(xDvd + " " + yDvd);
-                frame.add(new Dvd(xDvd, yDvd));
+                frame.getContentPane().add(new Dvd(xDvd, yDvd,r,g,b));
                 frame.setVisible(true);
                 frame.pack();
             }
@@ -97,6 +105,11 @@ public class  Move extends JFrame {
         frame.add(aa);
         frame.setVisible(true);
         frame.pack();
+    }
+    public static void randomDvd(){
+        r = (int)(Math.random()*256);
+        g = (int)(Math.random()*256);
+        b = (int)(Math.random()*256);
     }
 
     //МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА МАШИНА

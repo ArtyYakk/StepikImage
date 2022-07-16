@@ -8,19 +8,21 @@ import java.io.File;
 import java.io.IOException;
 
 public class Dvd extends JPanel {
-    public BufferedImage img;
+    public BufferedImage newImg;
     private final int x;
     private final int y;
 
-    public Dvd(int x, int y){
+    public Dvd(int x, int y, int r, int g, int b){
         this.x = x;
         this.y = y;
         try{
-            img = ImageIO.read(new File("C:\\Users\\iakon\\Pictures\\dvd.png"));
+            BufferedImage img = ImageIO.read(new File("C:\\Users\\iakon\\Pictures\\dvd.png"));
+            newImg = new BufferedImage(img.getWidth(),img.getHeight(), BufferedImage.TYPE_INT_ARGB);
+
             for(int i = 0; i<img.getWidth(); i++){
                 for (int j = 0; j<img.getHeight(); j++){
                     if(img.getRGB(i,j) != 0){
-                        img.setRGB(i,j,new Color(255,0,0).getRGB());
+                        newImg.setRGB(i,j,new Color(r,g,b).getRGB());
                     }
                 }
             }
@@ -32,8 +34,6 @@ public class Dvd extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(img, x,y,this);
-
-
+        g.drawImage(newImg, x,y,this);
     }
 }

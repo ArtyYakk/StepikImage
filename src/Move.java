@@ -1,5 +1,6 @@
 import figures.*;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,10 +16,6 @@ public class  Move extends JFrame {
     static int r= 0;
     static int g = 0;
     static int b = 0;
-    static int xSun = 270;
-    static int ySun = 270;
-    static int xEarth = 50;
-    static int yEarth = 270;
 
     static boolean flagUR = false;
     static boolean flagUL = false;
@@ -28,21 +25,6 @@ public class  Move extends JFrame {
     static boolean flagOne = true;
     static boolean flagTwo = true;
     static boolean flagThree = true;
-
-    //SunEarth SunEarth SunEarth SunEarth SunEarth SunEarth SunEarth
-
-    public static void moveSun(){
-        JFrame frame = new JFrame("Солнце и Земля");
-        frame.setLocation(1120,240);
-        frame.setPreferredSize(new Dimension(800,800));
-        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-        Sun aa = new Sun(xSun,ySun,xEarth,yEarth);
-
-        frame.getContentPane().add(aa);
-        frame.setVisible(true);
-        frame.pack();
-    }
 
     //DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD DVD
     public static void moveDvd(){

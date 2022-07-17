@@ -8,7 +8,7 @@ public class Main extends JFrame {
         //Move.moveRocket();
         //Move.moveCar();
         //Move.moveDvd();
-        Move.moveSun();
+        SunSystem.moveSun();
 
 
     }

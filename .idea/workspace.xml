@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="501c27a4-456a-457c-90be-06c8cf8aab3a" name="Changes" comment="Загрузил изображения солнца и земли, установил а начальное положение">
-      <change afterPath="$PROJECT_DIR$/src/SunSystem.java" afterDir="false" />
+    <list default="true" id="501c27a4-456a-457c-90be-06c8cf8aab3a" name="Changes" comment="Земля движеся вокруг солнца">
+      <change afterPath="$PROJECT_DIR$/src/TrueSunSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/figures/TrueSun.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/figures/Sun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/figures/Sun.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658054875707</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Земля движеся вокруг солнца">
+      <created>1658066551550</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658066551550</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +162,7 @@
     <MESSAGE value="Лого DVD движется, осталось добавить функцию изменения цвета при ударении об рамку" />
     <MESSAGE value="Добавлена функция изменения цвета лого при касании рамки" />
     <MESSAGE value="Загрузил изображения солнца и земли, установил а начальное положение" />
-    <option name="LAST_COMMIT_MESSAGE" value="Загрузил изображения солнца и земли, установил а начальное положение" />
+    <MESSAGE value="Земля движеся вокруг солнца" />
+    <option name="LAST_COMMIT_MESSAGE" value="Земля движеся вокруг солнца" />
   </component>
 </project>

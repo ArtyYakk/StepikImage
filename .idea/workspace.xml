@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="501c27a4-456a-457c-90be-06c8cf8aab3a" name="Changes" comment="Лого DVD движется, осталось добавить функцию изменения цвета при ударении об рамку">
+    <list default="true" id="501c27a4-456a-457c-90be-06c8cf8aab3a" name="Changes" comment="Добавлена функция изменения цвета лого при касании рамки">
+      <change afterPath="$PROJECT_DIR$/src/figures/Sun.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/figures/Dvd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/figures/Dvd.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657831312221</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Добавлена функция изменения цвета лого при касании рамки">
+      <created>1658003049957</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658003049957</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +146,7 @@
     <MESSAGE value="Машина движется по квадратной траектории, поворачивает" />
     <MESSAGE value="Промежуточный коммит" />
     <MESSAGE value="Лого DVD движется, осталось добавить функцию изменения цвета при ударении об рамку" />
-    <option name="LAST_COMMIT_MESSAGE" value="Лого DVD движется, осталось добавить функцию изменения цвета при ударении об рамку" />
+    <MESSAGE value="Добавлена функция изменения цвета лого при касании рамки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена функция изменения цвета лого при касании рамки" />
   </component>
 </project>

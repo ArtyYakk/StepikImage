@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class TrueSun extends JPanel {
+public class TrueSun extends JPanel{
     BufferedImage sun;
     BufferedImage mercury;
     BufferedImage venus;
@@ -34,7 +34,7 @@ public class TrueSun extends JPanel {
     private final int xNeptun;
     private final int yNeptun;
     private final int xPluton;
-    private final int yPluton;
+    private final int yPluton;;
 
     public TrueSun(int xSun, int ySun, int xMercury, int yMercury, int xVenus, int yVenus,int xEarth, int yEarth,
                    int xMars, int yMars,int xUpiter, int yUpiter,int xSaturn, int ySaturn,int xUran, int yUran,
@@ -79,33 +79,24 @@ public class TrueSun extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(sun.getScaledInstance(sun.getWidth()/6, sun.getHeight()/6, //SUN
-                Image.SCALE_DEFAULT), xSun, ySun, this);
-
+                        Image.SCALE_DEFAULT), xSun, ySun, TrueSun.this);
         g.drawImage(mercury.getScaledInstance(mercury.getWidth()/18, mercury.getHeight()/18,
-                Image.SCALE_DEFAULT), xMercury, yMercury, this);
-
+                        Image.SCALE_DEFAULT), xMercury, yMercury, TrueSun.this);
         g.drawImage(venus.getScaledInstance(venus.getWidth()/16, venus.getHeight()/16,
-                Image.SCALE_DEFAULT), xVenus, yVenus, this);
-
+                        Image.SCALE_DEFAULT), xVenus, yVenus, TrueSun.this);
         g.drawImage(earth.getScaledInstance(earth.getWidth()/11, earth.getHeight()/11,
-                Image.SCALE_DEFAULT), xEarth, yEarth, this);
-
+                        Image.SCALE_DEFAULT), xEarth, yEarth, TrueSun.this);
         g.drawImage(mars.getScaledInstance(mars.getWidth()/15, mars.getHeight()/15,
-                Image.SCALE_DEFAULT), xMars, yMars, this);
-
+                        Image.SCALE_DEFAULT), xMars, yMars, TrueSun.this);
         g.drawImage(upiter.getScaledInstance(upiter.getWidth()/8, upiter.getHeight()/8,
-                Image.SCALE_DEFAULT), xUpiter, yUpiter, this);
-
+                        Image.SCALE_DEFAULT), xUpiter, yUpiter, TrueSun.this);
         g.drawImage(saturn.getScaledInstance(saturn.getWidth()/6, saturn.getHeight()/6,
-                Image.SCALE_DEFAULT), xSaturn, ySaturn, this);
-
+                        Image.SCALE_DEFAULT), xSaturn, ySaturn, TrueSun.this);
         g.drawImage(uran.getScaledInstance(uran.getWidth()/10, uran.getHeight()/10,
-                Image.SCALE_DEFAULT), xUran, yUran, this);
-
+                        Image.SCALE_DEFAULT), xUran, yUran, TrueSun.this);
         g.drawImage(neptun.getScaledInstance(neptun.getWidth()/12, neptun.getHeight()/12,
-                Image.SCALE_DEFAULT), xNeptun, yNeptun, this);
-
+                        Image.SCALE_DEFAULT), xNeptun, yNeptun, TrueSun.this);
         g.drawImage(pluton.getScaledInstance(pluton.getWidth()/30, pluton.getHeight()/30,
-                Image.SCALE_DEFAULT), xPluton, yPluton, this);
+                        Image.SCALE_DEFAULT), xPluton, yPluton, TrueSun.this);
     }
 }

@@ -9,7 +9,9 @@ public class Main extends JFrame {
         //Move.moveCar();
         //Move.moveDvd();
         //SunSystem.moveSun();
-        TrueSunSystem.moveSun();
+        //TrueSunSystem.moveSun();
+        RaceMove a = new RaceMove();
+        a.letsRace();
 
 
     }

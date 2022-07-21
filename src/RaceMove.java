@@ -1,4 +1,5 @@
 import figures.Race;
+import figures.RaceWinnerBanner;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -54,16 +55,15 @@ public class RaceMove extends JFrame {
 
         RaceThread t = new RaceThread("Poihali");
         t.start();
-        try{
+        try {
             t.join();
+        } catch (InterruptedException e) {
+            System.out.println("Interrupted exception");
         }
-        catch (InterruptedException e){
-            System.out.printf("%s has been interrupted", t.getName());
-        }
-
     }
 
     static class RaceThread extends Thread{
+        boolean changable = true;
 
         RaceThread(String name){
             super(name);
@@ -71,7 +71,19 @@ public class RaceMove extends JFrame {
 
         @Override
         public void run() {
+
+            frame.getContentPane().add(new Race(x1,y1,x2,y2,x3,y3,x4,y4,x5,y5,one,two,
+                    three,four,five));
+            frame.setVisible(true);
+            frame.pack();
+
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             ActionListener listener = new ActionListener(){
+
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     int max = Arrays.stream(new int[]{x1-15,x2+35,x3-60,x4-60,x5-60})
@@ -83,17 +95,24 @@ public class RaceMove extends JFrame {
                             if(find[i-1] >= 620) winner = "The car number " + i + " has won!!!";
                         }
                         System.out.println(winner);
+                        frame.getContentPane().add(new RaceWinnerBanner(winner));
+                        frame.setVisible(true);
+                        frame.pack();
+                        changable = false;
                     }
-                    x1 += (1 + Math.random()*5);
-                    x2 += (1 + Math.random()*5);
-                    x3 += (1 + Math.random()*5);
-                    x4 += (1 + Math.random()*5);
-                    x5 += (1 + Math.random()*5);
+                    if(changable){
+                        x1 += (1 + Math.random()*5);
+                        x2 += (1 + Math.random()*5);
+                        x3 += (1 + Math.random()*5);
+                        x4 += (1 + Math.random()*5);
+                        x5 += (1 + Math.random()*5);
 
-                    frame.getContentPane().add(new Race(x1,y1,x2,y2,x3,y3,x4,y4,x5,y5,one,two,
-                            three,four,five));
-                    frame.setVisible(true);
-                    frame.pack();
+                        frame.getContentPane().add(new Race(x1,y1,x2,y2,x3,y3,x4,y4,x5,y5,one,two,
+                                three,four,five));
+                        frame.setVisible(true);
+                        frame.pack();
+                    }
+
                 }
             };
 

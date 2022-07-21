@@ -21,9 +21,6 @@ public class Race extends JPanel{
     private final int y4;
     private final int x5;
     private final int y5;
-
-
-
     public Race(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int x5,
                    int y5, BufferedImage one, BufferedImage two, BufferedImage three,
                 BufferedImage four, BufferedImage five) {
@@ -64,7 +61,6 @@ public class Race extends JPanel{
                 x4, y4,this);
         g.drawImage(five.getScaledInstance(k5, height, Image.SCALE_DEFAULT),
                 x5, y5,this);
-        g.drawLine(330,0,330,1000);
 
     }
 }

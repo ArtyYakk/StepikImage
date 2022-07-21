@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="501c27a4-456a-457c-90be-06c8cf8aab3a" name="Changes" comment="Солнечная система готова (без применения многопоточности)">
-      <change afterPath="$PROJECT_DIR$/src/RaceMove.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/figures/Race.java" afterDir="false" />
+    <list default="true" id="501c27a4-456a-457c-90be-06c8cf8aab3a" name="Changes" comment="(Гонки) машины едут, победитель определяется, осталось сделать паузу и вывести итог на экран">
+      <change afterPath="$PROJECT_DIR$/src/figures/RaceWinnerBanner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TrueSunSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TrueSunSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/figures/TrueSun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/figures/TrueSun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RaceMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RaceMove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/figures/Race.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/figures/Race.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658088537279</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="(Гонки) машины едут, победитель определяется, осталось сделать паузу и вывести итог на экран">
+      <created>1658350534657</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1658350534657</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,6 +178,8 @@
     <MESSAGE value="Загрузил изображения солнца и земли, установил а начальное положение" />
     <MESSAGE value="Земля движеся вокруг солнца" />
     <MESSAGE value="Солнечная система готова (без применения многопоточности)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Солнечная система готова (без применения многопоточности)" />
+    <MESSAGE value="(Гонки) машину едут, победитель определяется, осталось сделать паузу и вывести итог на экран" />
+    <MESSAGE value="(Гонки) машины едут, победитель определяется, осталось сделать паузу и вывести итог на экран" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Гонки) машины едут, победитель определяется, осталось сделать паузу и вывести итог на экран" />
   </component>
 </project>
